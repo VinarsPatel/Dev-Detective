@@ -2,13 +2,13 @@
 let r = document.querySelector(':root');
 var dark = 0;
 
-let bgc = ['#f6f8ff', '#141d2f'];
-let bgcc = ['#fefefe', '#1e2a47'];
-let textc = ['#4b6a9b', '#ffffff'];
-let textaltc = ['#2b3442', '#ffffff'];
-let text = ['dark', 'light'];
-let imgSrc = ["./images/moon-icon.svg", "./images/sun-icon.svg"];
-
+const bgc = ['#f6f8ff', '#141d2f'];
+const bgcc = ['#fefefe', '#1e2a47'];
+const textc = ['#4b6a9b', '#ffffff'];
+const textaltc = ['#2b3442', '#ffffff'];
+const text = ['dark', 'light'];
+const imgSrc = ["./images/moon-icon.svg", "./images/sun-icon.svg"];
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const mode = document.getElementById("modeId");
 const mt = document.getElementById("mt");
@@ -66,7 +66,6 @@ async function fetchDev(username) {
       const response = await fetch(`https://api.github.com/users/${username}`);
       const data = await response.json();
 
-      console.log(err.innerText);
       if (data?.message == "Not Found") {
          err.classList.add("showError");
          showErr = true;
@@ -77,7 +76,6 @@ async function fetchDev(username) {
       if (err.classList.contains("showError")) {
          err.classList.remove("showError");
       }
-
 
       dp.src = data.avatar_url;
       nameU.innerText = (data.name) ? data.name : data.login;
@@ -91,7 +89,6 @@ async function fetchDev(username) {
 
       location1.innerText = (data.location) ? data.location : "Not available";
 
-      console.log(data.twitter_username);
       twitter.innerText = (data.twitter_username != null) ? data.twitter_username : "Not available";
       if (data.twitter_username) { twitter.href = `https://twitter.com/${data.twitter_username}`; }
 
@@ -99,6 +96,9 @@ async function fetchDev(username) {
 
       blog.innerText = (data.blog) ? data.blog : "Not available";
       if (blog.href != "") blog.href = data.blog;
+
+      const str = data.created_at.split("-")
+      date.innerText= "Joined "+parseInt(str[1][0]+str[1][1])+" "+months[parseInt(str[1])-1]+" "+str[0];
    }
 
    catch {

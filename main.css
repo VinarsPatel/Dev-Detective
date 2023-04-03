@@ -35,7 +35,6 @@ a:active {
   font-size: 13px;
   color: var(--lm-text);
   width: full;
-  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
