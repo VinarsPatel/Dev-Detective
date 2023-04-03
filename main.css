@@ -30,7 +30,7 @@ a:active {
   word-wrap: break-word;
 }
 
-.wrapper {
+body {
   background-color: var(--lm-bg);
   font-size: 13px;
   color: var(--lm-text);
@@ -45,7 +45,6 @@ a:active {
   max-width: 800px;
   min-width: 400px;
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -203,7 +202,7 @@ button:active {
   padding-top: 10px;
 }
 
-/* numarical info */
+/* numerical info */
 .numInfo-cnt {
   width: 100%;
   max-width: 5000px;
