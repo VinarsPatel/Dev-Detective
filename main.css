@@ -1,28 +1,26 @@
 :root {
   --lm-bg: #f6f8ff;
-  /* --lm-bg:#141d2f; */
   --lm-bg-content: #fefefe;
-  /* --lm-bg-content:#1e2a47; */
   --lm-text: #4b6a9b;
   --lm-text-alt: #2b3442;
-  /* --lm-text: #ffffff; */
-  /* --lm-text-alt: white; */
   --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
   --lm-icon-bg: brightness(100%);
   /* Btn */
   --btn: #0079ff;
   --btn-hover: #60abff;
-  
 }
+
 a {
   color: var(--lm-text-alt);
 }
 
-a, a:hover, a:visited, a:active {
-   color: inherit;
-   /* text-decoration: none; */
-  }
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+}
 
 * {
   box-sizing: border-box;
@@ -30,7 +28,6 @@ a, a:hover, a:visited, a:active {
   padding: 0;
   font-family: "Space Mono", monospace;
   word-wrap: break-word;
-
 }
 
 .wrapper {
@@ -49,13 +46,12 @@ a, a:hover, a:visited, a:active {
   max-width: 800px;
   min-width: 400px;
   margin: 0 auto;
- 
+
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding-top: 5%;
   padding-bottom: 5%;
-  /* margin-bottom: 70px; */
 }
 
 .head {
@@ -140,16 +136,16 @@ button:active {
   transform: scale(0.975);
 }
 
-.error{
-   font-size: 14px;
-   color: red;
-   width: 40%;
-   display: none;
+.error {
+  font-size: 14px;
+  color: red;
+  width: 40%;
+  display: none;
 }
 
-.showError{
-   display: block;
-   opacity: 1;
+.showError {
+  display: block;
+  opacity: 1;
 }
 /* user information */
 .infoClass {
@@ -160,7 +156,6 @@ button:active {
   display: flex;
   flex-direction: row;
 }
-
 
 .userInfo {
   display: flex;
@@ -275,20 +270,20 @@ button:active {
   .header {
     flex-direction: column;
   }
-  .container{
-   width: fit-content;
-   height: fit-content;
+  .container {
+    width: fit-content;
+    height: fit-content;
   }
-  .right{
-   width: 90%;
+  .right {
+    width: 90%;
   }
 }
 
 @media (max-width: 760px) {
-   .container{
-      display: flex;
-      overflow-y: visible;
-   }
+  .container {
+    display: flex;
+    overflow-y: visible;
+  }
   .nameid {
     flex-direction: column;
   }
@@ -314,5 +309,3 @@ button:active {
     word-wrap: break-word;
   }
 }
-
-

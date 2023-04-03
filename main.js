@@ -2,28 +2,26 @@
 let r = document.querySelector(':root');
 var dark = 0;
 
-let bgc = ['#f6f8ff','#141d2f'];
-let bgcc = ['#fefefe','#1e2a47'];
-let textc = ['#4b6a9b','#ffffff'];
-let textaltc = ['#2b3442','#ffffff'];
-let text = ['dark','light'];
-let imgSrc = ["./images/moon-icon.svg","./images/sun-icon.svg"];
+let bgc = ['#f6f8ff', '#141d2f'];
+let bgcc = ['#fefefe', '#1e2a47'];
+let textc = ['#4b6a9b', '#ffffff'];
+let textaltc = ['#2b3442', '#ffffff'];
+let text = ['dark', 'light'];
+let imgSrc = ["./images/moon-icon.svg", "./images/sun-icon.svg"];
 
 
 const mode = document.getElementById("modeId");
 const mt = document.getElementById("mt");
 const mi = document.getElementById("mi");
-mode.addEventListener("click",()=>{
+mode.addEventListener("click", () => {
    switchMode();
 });
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-   // dark mode
-   // dark=1;
    switchMode();
 }
 function switchMode() {
-   dark = (dark==1)?0:1;
+   dark = (dark == 1) ? 0 : 1;
    mi.src = imgSrc[dark];
    mt.innerText = text[dark];
    r.style.setProperty('--lm-bg', bgc[dark]);
@@ -76,8 +74,8 @@ async function fetchDev(username) {
       }
 
 
-      if(err.classList.contains("showError")){
-      err.classList.remove("showError");
+      if (err.classList.contains("showError")) {
+         err.classList.remove("showError");
       }
 
 
