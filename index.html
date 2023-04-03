@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>DevDetective</title>
+
+   <link rel="shortcut icon" href="./images/android-chrome-192x192.png" type="image/x-icon">
+   <link rel="stylesheet" href="main.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   <div class="wrapper dmBg">
+      <div class="container">
+         <div class="head">
+            <h1>DevDetective</h1>
+            <div class="modeClass" id="modeId">
+               <p id="mt" class="mode"></p>
+               <img width="30px" height="30px" src="" id="mi">
+            </div>
+         </div>
+
+         <form class="searchClass dmContent">
+            <!-- <img src="./images/search-icon.svg" alt=""> -->
+            <input type="text" class="dmContent" placeholder="Enter a GitHub Username...">
+            <p class="error" id="e">Enter Valid Username</p>
+            <button type="submit" id="submit" >Search</button>
+         </form>
+
+         <div class="infoClass shadow dmContent">
+            <div class="userInfo">
+               <!-- head part -->
+               <div class="header">
+                  <div class="nameid">
+                     <div class="dpdiv">
+                        <img id="dp" style="border-radius: 100%;" src="" alt="" width="100px">
+                     </div>
+
+                     <div>
+                        <h2 id="name"></h2>
+                        <a href="" id="userid"></a>
+                        <div id="bio"></div>
+                     </div>
+                  </div>
+                  <div class="dateclass" id="date">Joined 05 May 2020</div>
+               </div>
+
+               <div class="right">
+                  <!-- User numerical info -->
+                  <div class="numInfo-cnt dmBg">
+                     <div class="numInfo ">
+                        <p>Repos</p>
+                        <p id="repo"></p>
+                     </div>
+                     <div class="numInfo">
+                        <p>Followers</p>
+                        <p id="followers"></p>
+                     </div>
+                     <div class="numInfo">
+                        <p>Following</p>
+                        <p id="following"></p>
+                     </div>
+                  </div>
+
+                  <!-- User social info -->
+                  <div class="social">
+                     <div class="sclEle location">
+                        <img src="./images/location-icon.svg" alt="">
+                        <p id="location"></p>
+                     </div>
+                     <div class="sclEle website">
+                        <img src="./images/website-icon.svg" alt="">
+                        <a href="#" id="website"></a>
+                     </div>
+                     <div class="sclEle twitter">
+                        <img src="./images/twitter-icon.svg" alt="">
+                        <a href="#" id="twitter"></a>
+                     </div>
+                     <div class="sclEle company">
+                        <img src="./images/company-icon.svg" alt="">
+                        <p id="company"></p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+      </div>
+   </div>
+   <script src="main.js"></script>
+</body>
+
+</html>
